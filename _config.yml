@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Orbit Vineyards
-email:
+email: orbitvineyards@icebergtech.xyz
 favicon: assets/img/favicon.png
 description: >- # this means to ignore newlines until "baseurl:"
   Space-Aged Spirits
@@ -46,12 +46,6 @@ exclude:
 #   - vendor/bundle/
 #   - vendor/cache/
 #   - vendor/gems/
-#   - vendor/ruby/
-
-footer-links:
-  email: dev@icebergtech.xyz
-  rss: anything
-
 version: 1.0.1
 
 
@@ -63,8 +57,3 @@ kramdown:
 
 sass:
   style: :expanded
-
-author:
-  name: "???"
-  url: "orbitvineyards.com"
-  email: "???"
