@@ -1,4 +1,5 @@
 FROM jekyll/builder:4 as builder
+USER 1000
 # First build the static site with jekyll
 WORKDIR /src/jekyll/
 # Create gemfile layers first
