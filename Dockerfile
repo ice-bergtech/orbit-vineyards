@@ -1,14 +1,13 @@
 FROM jekyll/builder:4 as builder
 # First build the static site with jekyll
 WORKDIR /jekyll/
-
-COPY --chown=jekyll:jekyll ./Gemfile .
-COPY --chown=jekyll:jekyll ./Gemfile.lock .
+# Create gemfile layers first
+COPY ./Gemfile .
+COPY ./Gemfile.lock .
 RUN bundle install
-
-COPY --chown=jekyll:jekyll . .
+# Make caching a little better
+COPY . .
 RUN jekyll build -t
-ENTRYPOINT [ "jekyll", "build" ]
 
 # Then place the built static site on webserver
 FROM httpd:alpine
