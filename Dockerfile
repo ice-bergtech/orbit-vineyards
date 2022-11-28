@@ -1,13 +1,14 @@
 FROM jekyll/builder:4 as builder
-USER 1000
 # First build the static site with jekyll
 WORKDIR /src/jekyll/
 # Create gemfile layers first
 COPY ./Gemfile .
 COPY ./Gemfile.lock .
 RUN bundle install
+USER 1000
 # Make caching a little better
 COPY . .
+
 RUN jekyll build -t
 
 # Then place the built static site on webserver
