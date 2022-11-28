@@ -1,0 +1,42 @@
+<head>
+	<link href="http://gmpg.org/xfn/11" rel="profile">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+	<!-- Enable responsiveness on mobile devices-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	{% include meta.html %}
+
+	<title>
+		{% if page.title == "Orbit Vineyards" %}
+		{{ site.title }} &middot; {{ site.tagline }}
+		{% else %}
+		{{ page.title }} &middot; {{ site.title }}
+		{% endif %}
+	</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/syntax.css">
+	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/svg-icons.css">
+
+	<!-- Icons -->
+	<link rel="shortcut icon" href="{{ site.baseurl }}/{{ site.favicon }}">
+
+	<script async defer data-domain="blog.bushi.moe" src="https://analytics.bushi.moe/js/plausible.js"></script>
+
+	<!-- RSS -->
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+	<link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" href="./assets/img/favicon.png">
+
+	<!--     Fonts and icons     -->
+	<link rel="stylesheet" type="text/css"
+		href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/font-awesome.min.css">
+	<!-- CSS Files -->
+	<link href="./assets/css/material-kit.css?v=2.0.7" rel="stylesheet" />
+	<!-- CSS Just for demo purpose, don't include it in your project -->
+	<link href="./assets/demo/demo.css" rel="stylesheet" />
+	{% include base.html %}
+
+</head>
