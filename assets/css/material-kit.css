@@ -67,7 +67,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fafafa;
+  background-color: #acacac;
 }
 
 [tabindex="-1"]:focus {
@@ -11590,7 +11590,7 @@ fieldset[disabled][disabled] .btn-group-raised .btn,
 }
 
 body {
-  background-color: #eee;
+  background-color: #757575;
   color: #000000;
   font-weight: 300;
 }
