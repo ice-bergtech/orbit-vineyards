@@ -5,9 +5,8 @@ WORKDIR /src/jekyll/
 COPY ./Gemfile .
 COPY ./Gemfile.lock .
 RUN bundle install
-USER 1000
-# Make caching a little better
-COPY . .
+# Makes caching a little better
+COPY --chown=jekyll:jekyll . .
 
 RUN jekyll build -t
 

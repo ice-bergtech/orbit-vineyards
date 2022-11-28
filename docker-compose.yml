@@ -12,3 +12,8 @@ services:
       - JEKYLL_GID=1000
     volumes:
       - ./:/srv/jekyll
+
+  j-dock:
+    build: .
+    ports:
+      - "7892:80"
