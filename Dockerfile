@@ -10,7 +10,7 @@ RUN bundle install
 #COPY --chown=jekyll:jekyll . .
 COPY . .
 
-RUN whoami && ls -aln && jekyll build -t
+RUN whoami && mkdir _site && chown jekyll ./_site && ls -aln && jekyll build -t
 
 # Then place the built static site on webserver
 FROM httpd:alpine
