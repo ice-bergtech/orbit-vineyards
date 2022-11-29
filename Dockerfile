@@ -6,7 +6,8 @@ COPY ./Gemfile .
 COPY ./Gemfile.lock .
 RUN bundle install
 # Makes caching a little better
-COPY --chown=0:0 . .
+USER 1000
+COPY --chown=1000:1000 . .
 
 RUN jekyll build -t
 
