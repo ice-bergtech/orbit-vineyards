@@ -9,7 +9,7 @@ RUN bundle install
 USER 1000
 COPY --chown=1000:1000 . .
 
-RUN jekyll build -t
+RUN whoami && jekyll build -t
 
 # Then place the built static site on webserver
 FROM httpd:alpine
