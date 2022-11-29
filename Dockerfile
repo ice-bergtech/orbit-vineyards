@@ -8,7 +8,7 @@ RUN bundle install
 # Makes caching a little better
 COPY --chown=jekyll:jekyll . .
 
-RUN jekyll build -t
+RUN echo $UID && ls -aln && jekyll build -t
 
 # Then place the built static site on webserver
 FROM httpd:alpine
