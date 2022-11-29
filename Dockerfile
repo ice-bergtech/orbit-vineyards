@@ -6,10 +6,11 @@ COPY ./Gemfile .
 COPY ./Gemfile.lock .
 RUN bundle install
 # Makes caching a little better
-USER jekyll
-COPY --chown=jekyll:jekyll . .
+#USER jekyll
+#COPY --chown=jekyll:jekyll . .
+COPY . .
 
-RUN whoami && ls -aln && chown jekyll . && ls -aln && jekyll build -t
+RUN whoami && ls -aln && jekyll build -t
 
 # Then place the built static site on webserver
 FROM httpd:alpine
