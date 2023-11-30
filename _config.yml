@@ -42,10 +42,10 @@ exclude:
   - dockerfile.*
   - .gitignore
   - tools/
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
 version: 1.0.1
 
 
